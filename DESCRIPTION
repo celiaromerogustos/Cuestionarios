@@ -1,0 +1,11 @@
+Package: Cuestionarios
+Type: Package
+Title: Análisis de cuestionarios. 
+Version: 1.0
+Date: 12-05-2020
+Author: Celia Romero Gustos
+Maintainer: <celiaromerogustos@gmail.com>
+Description: Análisis de cuestionarios por tipo de variables. 
+License: GNU General
+Encoding: UTF-8
+RoxygenNote: 7.1.0
