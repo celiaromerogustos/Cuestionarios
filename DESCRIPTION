@@ -6,7 +6,7 @@ Date: 12-05-2020
 Author: Celia Romero Gustos
 Maintainer: <celiaromerogustos@gmail.com>
 Description: Análisis de cuestionarios por tipos de variables.
-import: 
+imports: 
     DescTools,
     corrplot,
     dplyr,
@@ -18,3 +18,4 @@ Depends: R (>= 3.6.0)
 License: GNU General
 Encoding: UTF-8
 RoxygenNote: 7.1.0
+LazyData: TRUE
