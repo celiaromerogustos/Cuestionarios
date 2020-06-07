@@ -5,14 +5,15 @@ Version: 1.0
 Date: 12-05-2020
 Author: Celia Romero Gustos
 Maintainer: <celiaromerogustos@gmail.com>
-Description: Análisis de  cuestionarios por tipos de variables.
-import: DescTools
-import: corrplot
-import: dplyr
-import: ggplot2
-import: knitr
-import: likert
-import: tables
+Description: Análisis de cuestionarios por tipos de variables.
+import: 
+    DescTools,
+    corrplot,
+    dplyr,
+    ggplot2,
+    knitr,
+    likert,
+    tables
 Depends: R (>= 3.6.0) 
 License: GNU General
 Encoding: UTF-8
