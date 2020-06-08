@@ -6,16 +6,16 @@ Date: 12-05-2020
 Author: Celia Romero Gustos
 Maintainer: <celiaromerogustos@gmail.com>
 Description: Análisis de cuestionarios por tipos de variables.
-imports: 
-    DescTools,
-    corrplot,
+Imports: 
+    DescTools (>= 0.99.3),
+    corrplot (>= 0.84),
     dplyr,
     ggplot2,
     knitr,
-    likert,
-    tables
-Depends: R (>= 3.6.0)    
+    tables,
+    sjPlot
+Depends: R (>= 3.6.0)
 License: GNU General
 Encoding: UTF-8
 RoxygenNote: 7.1.0
-LazyData: TRUE
+LazyData: TRUE 
