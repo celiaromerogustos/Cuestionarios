@@ -1,7 +1,7 @@
-#' @import likert
+#' @import sjPlot
 #' @import dplyr
 #' @title Visualización gráfica para variables de valoración (Escala Likert) en bloques de tres.
-#' @description Función que genera un diagrama de barras, mapa de calor y gráfico de densidad para una fácil
+#' @description Función que genera un diagrama de barras para una fácil
 #'  visualización y comparación de tres variables de tipo ordinal con las mismas etiquetas.
 #' @param Datos data.frame donde se encuentra X
 #' @param X1 vector de respuestas de la variable 1 (tamaño n)
@@ -19,42 +19,13 @@ graf.val3=function(datos,x1,x2,x3, etiquetas, preguntas) {
 
   data=cbind.data.frame(datos$factor1,datos$factor2, datos$factor3)
   names(data)=preguntas
-  mis.colores <- colorRampPalette(c("coral", "lightblue"))
-  netiq=length(etiquetas)
 
-  Result = likert(data)
+   #Gráfico de barras
+  plot_likert(data, show.n=FALSE,
+              geom.colors = "RdBu",
+              show.prc.sign = FALSE,
+              cat.neutral = 3,
+              value = "sum.outside")
 
-  #Grafico de barras
-  print( likert.bar.plot(Result, low.color = "coral",
-                         high.color = "lightblue", neutral.color = "azure",
-                         neutral.color.ramp = "white", plot.percent.low = TRUE,
-                         plot.percent.high = TRUE, plot.percent.neutral = TRUE,
-                         plot.percents = FALSE, text.size = 3,
-                         text.color = "black",
-                         centered = TRUE,
-                         legend = "Respuestas",
-                         legend.position = "bottom",
-                         panel.strip.color = "#F0F0F0",
-                         xlab="Porcentaje"))
-
-
-
-
-  print(plot(Result,
-             type = 'heat',
-             low.color = "white",
-             high.color = "coral",
-             text.color = "black",
-             text.size = 3,
-             wrap = 50)  +
-          theme(legend.position = 'none'))
-
-  #Densidad
-  plot(Result,
-       type="density",
-       facet = TRUE,
-       bw = 0.5,
-       main="",
-       col = mis.colores(netiq))
 
 }
