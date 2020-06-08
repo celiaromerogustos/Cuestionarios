@@ -14,6 +14,7 @@ imports:
     knitr,
     likert,
     tables
+Depends: R (>= 3.6.0)    
 License: GNU General
 Encoding: UTF-8
 RoxygenNote: 7.1.0
