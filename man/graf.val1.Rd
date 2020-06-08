@@ -19,5 +19,5 @@ graf.val1(datos, x, etiquetas, nombre)
 Diagrama de barras, mapa de calor y gráfico de densidad.
 }
 \description{
-Función que genera un diagrama de barras, mapa de calor y gráfico de densidad de la variable X .
+Función que genera un diagrama de barras de la variable X.
 }

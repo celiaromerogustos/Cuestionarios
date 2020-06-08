@@ -23,6 +23,6 @@ graf.val3(datos, x1, x2, x3, etiquetas, preguntas)
 Diagrama de barras, mapa de calor y gráfico de densidad.
 }
 \description{
-Función que genera un diagrama de barras, mapa de calor y gráfico de densidad para una fácil
+Función que genera un diagrama de barras para una fácil
  visualización y comparación de tres variables de tipo ordinal con las mismas etiquetas.
 }
