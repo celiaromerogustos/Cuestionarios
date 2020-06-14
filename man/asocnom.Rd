@@ -7,15 +7,15 @@
 asocnom(X, Y, conf, nombrex, nombrey)
 }
 \arguments{
-\item{X:}{vector numérico.}
+\item{X}{vector numérico.}
 
-\item{Y:}{vector numérico.}
+\item{Y}{vector numérico.}
 
-\item{Conf:}{Valor que indica el nivel del confianza para crear el intervalo (0<conf<1).}
+\item{Conf}{Valor que indica el nivel del confianza para crear el intervalo (0<conf<1).}
 
-\item{Nombrex:}{cadena de caracteres que indica nombre de la variable X.}
+\item{Nombrex}{cadena de caracteres que indica nombre de la variable X.}
 
-\item{Nombrey:}{cadena de caracteres que indica nombre de la variable Y.}
+\item{Nombrey}{cadena de caracteres que indica nombre de la variable Y.}
 }
 \description{
 devuelve un mensaje con el coeficiente Lambda simétrico para variables nominales.

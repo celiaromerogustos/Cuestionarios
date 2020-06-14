@@ -19,5 +19,6 @@ graf.cont(datos, X, nombre, título)
 Diagrama de caja, histograma con media e histograma más densidad
 }
 \description{
-Función que genera un diagrama de caja, histograma con media e histograma más densidad de la variable X.
+Función que genera un diagrama de caja, histograma con media e
+ histograma más densidad de la variable X.
 }
