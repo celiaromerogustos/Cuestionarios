@@ -35,6 +35,5 @@ desc.cuan.2cual= function (datos, X1, X2, X3, etiquetas2, etiquetas3,
   tabla <- gsub("nombre2", nombre2, tabla)
   tabla <- gsub("nombre3", nombre3, tabla)
   tt <- tabular (tabla, data = datos1)
-
-  tablaLatex( tt ,caption= título)
+  tt
 }

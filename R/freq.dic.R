@@ -11,7 +11,8 @@
 
 freq.dic= function(datos, X, etiquetas, titulo)
  {
-  datos1 <- mutate(datos, v1 = factor(X, labels = etiquetas)) ##transforma los datos numéricos a factor
+  datos1 <- mutate(datos, v1 = factor(X, labels = etiquetas))
+  ##transforma los datos numéricos a factor
 
   Frec.abs=table(datos1$v1)
   Frec.rel=round(prop.table(Frec.abs),2)

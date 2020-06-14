@@ -22,13 +22,13 @@ freq.cual.2cual = function(datos,X1,X2, X3, etiquetasx1, etiquetasx2,etiquetasx3
   datos2 <- mutate(datos, v2 = factor(X2, labels = etiquetasx2))
   datos3 <- mutate(datos, v3 = factor(X3, labels = etiquetasx3))
 
-  #
+
   tabla <- "(nombre1 = datos1$v1 ) * ( nombre2 = datos2$v2 ) +
   ( Total = 1 ) ~  (  nombre3 = datos3$v3 )+ ( Total = 1 )"
   tabla <- gsub("nombre1", nombre1, tabla)
   tabla <- gsub("nombre2", nombre2, tabla)
   tabla <- gsub("nombre3", nombre3, tabla)
   tt <- tabular (tabla, data = datos1)
-  tablaLatex( tt, caption= título)
+  tt
 
 }

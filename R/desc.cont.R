@@ -20,8 +20,12 @@ desc.cont= function (datos, x, nombre, título) {
   Desv<- function (x) {sd(x)}
 
   tabla <- "~ (n=1)+(nombre =x)*(Media+Mediana+Desv+IC1+IC2)"
-  tabla <- gsub("nombre", nombre, tabla)
   tt <- tabular (tabla, data = datos)
-  #gsub sustituye en la fórmula de tabla "nombre" por nombre.
 
-  tablaLatex( tt, caption= título) }
+  df <- data.frame(matrix(unlist(tt), nrow=1, byrow=F))
+  colnames(df) = c("n", "Media", "Mediana", "Desv", "IC1", "IC2")
+  rownames(df)= nombre
+
+  kable(df, digits = 2, caption = título)
+
+}

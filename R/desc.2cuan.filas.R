@@ -23,8 +23,11 @@ desc.2cuan.filas= function (x1,x2, nombrex1, nombrex2, título) {
 
   tabla <- "((nombrex1=x1)+(nombrex2=x2))~(n=1)+
              (Media+Mediana+Desv+IC1+IC2)"
-  tabla <- gsub("nombrex1", nombrex1, tabla)
-  tabla <- gsub("nombrex2", nombrex2, tabla)
+
   tt <- tabular (tabla, data = datos)
-  #gsub sustituye en la fórmula de tabla "nombre" por nombre.
-  tablaLatex( tt, caption= título) }
+  df <- data.frame(matrix(unlist(tt), nrow=2, byrow=F))
+  colnames(df) = c("n", "Media", "Mediana", "Desv", "IC1", "IC2")
+  rownames(df)= c(nombrex1, nombrex2)
+
+  kable(df, digits = 2, caption = título)
+}
